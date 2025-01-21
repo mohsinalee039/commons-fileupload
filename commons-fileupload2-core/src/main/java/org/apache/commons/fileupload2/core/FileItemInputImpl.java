@@ -78,11 +78,10 @@ class FileItemInputImpl implements FileItemInput {
      * @param contentType      The items content type, or null.
      * @param formField        Whether the item is a form field.
      * @param contentLength    The items content length, if known, or -1
-     * @throws IOException         Creating the file item failed.
-     * @throws FileUploadException Parsing the incoming data stream failed.
+     * @throws IOException         Creating the file item failed or parsing the incoming data stream failed.
      */
     FileItemInputImpl(final FileItemInputIteratorImpl fileItemIterator, final String fileName, final String fieldName, final String contentType,
-            final boolean formField, final long contentLength) throws FileUploadException, IOException {
+                      final boolean formField, final long contentLength) throws IOException {
         this.fileItemInputIteratorImpl = fileItemIterator;
         this.fileName = fileName;
         this.fieldName = fieldName;
@@ -199,5 +198,4 @@ class FileItemInputImpl implements FileItemInput {
         this.headers = headers;
         return this;
     }
-
 }
