@@ -21,8 +21,8 @@ import org.junit.jupiter.api.Test;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.charset.UnsupportedCharsetException;
-import java.util.function.Function;
 import java.util.function.LongSupplier;
+import java.util.function.UnaryOperator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -142,17 +142,20 @@ public class MockRequestContextTest {
         private final String contentType;
         private final InputStream inputStream;
 
-        private MockRequestContext(final Function<String, String> contentLengthString,
+        private MockRequestContext(final UnaryOperator<String> contentLengthString,  // Updated to UnaryOperator
                                    final LongSupplier contentLengthDefault,
                                    final Object request,
                                    final String characterEncoding,
                                    final String contentType,
                                    final InputStream inputStream) {
-            super(contentLengthString, contentLengthDefault, request);
+            super(contentLengthString, contentLengthDefault, request);  // Pass to superclass
             this.characterEncoding = characterEncoding;
             this.contentType = contentType;
             this.inputStream = inputStream;
-        }
+
+
+
+}
 
         /**
          * Gets the character encoding for the request.

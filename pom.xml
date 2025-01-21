@@ -60,6 +60,7 @@
     <commons.compiler.release>11</commons.compiler.release>
 	<commons.parent.dir>${basedir}</commons.parent.dir>
     <commons.componentid>fileupload</commons.componentid>
+    <commons.changes.version>2.12.0</commons.changes.version>
     <commons.module.name>org.apache.commons.fileupload2</commons.module.name>
     <commons.release.version>2.0.0-M3</commons.release.version>
     <commons.release.next>2.0.0</commons.release.next>
@@ -73,7 +74,7 @@
     <commons.site.path>fileupload</commons.site.path>
     <commons.scmPubUrl>https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-fileupload</commons.scmPubUrl>
     <commons.scmPubCheckoutDirectory>site-content</commons.scmPubCheckoutDirectory>
-    
+
     <commons.siteOutputDirectory>${basedir}/target/site</commons.siteOutputDirectory>
     <commons.releaseNotesLocation>${commons.parent.dir}/RELEASE-NOTES.txt</commons.releaseNotesLocation>
 
@@ -192,11 +193,11 @@
             </reports>
           </reportSet>
         </reportSets>
-      </plugin>      
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-changes-plugin</artifactId>
-        <version>${commons.changes.version}</version>
+        <version>2.12.0</version>
         <configuration>
           <issueLinkTemplate>%URL%/../%ISSUE%</issueLinkTemplate>
         </configuration>
@@ -383,7 +384,7 @@
       <email>ggregory at apache.org</email>
       <url>https://www.garygregory.com</url>
       <organization>The Apache Software Foundation</organization>
-      <organizationUrl>https://www.apache.org/</organizationUrl>      
+      <organizationUrl>https://www.apache.org/</organizationUrl>
       <roles>
         <role>PMC Member</role>
       </roles>
