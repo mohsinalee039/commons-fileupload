@@ -89,7 +89,7 @@ public class JakartaServletFileUpload<I extends FileItem<I>, F extends FileItemF
      *                             uploaded content.
      */
     @Override
-    public FileItemInputIterator getItemIterator(final HttpServletRequest request) throws FileUploadException, IOException {
+    public FileItemInputIterator getItemIterator(final HttpServletRequest request) throws IOException {
         return super.getItemIterator(new JakartaServletRequestContext(request));
     }
 
