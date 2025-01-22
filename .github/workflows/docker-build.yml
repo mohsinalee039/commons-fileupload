@@ -1,3 +1,0 @@
-from java:latest
-
-CMD ["echo", "hello from github"]
