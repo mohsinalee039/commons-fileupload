@@ -285,7 +285,7 @@ public abstract class AbstractFileUpload<R, I extends FileItem<I>, F extends Fil
      *                             uploaded content.
      */
     // Abstract method with generic type parameter R.
-    public abstract FileItemInputIterator getItemIterator(R request) throws FileUploadException, IOException;
+    public abstract FileItemInputIterator getItemIterator(R request) throws IOException;
 
     /**
      * Gets an <a href="http://www.ietf.org/rfc/rfc1867.txt">RFC 1867</a> compliant {@code multipart/form-data} stream.
@@ -296,7 +296,7 @@ public abstract class AbstractFileUpload<R, I extends FileItem<I>, F extends Fil
      * @throws IOException         An I/O error occurred. This may be a network error while communicating with the client or a problem while storing the
      *                             uploaded content.
      */
-    public FileItemInputIterator getItemIterator(final RequestContext requestContext) throws FileUploadException, IOException {
+    public FileItemInputIterator getItemIterator(final RequestContext requestContext) throws IOException {
         return new FileItemInputIteratorImpl(this, requestContext);
     }
 

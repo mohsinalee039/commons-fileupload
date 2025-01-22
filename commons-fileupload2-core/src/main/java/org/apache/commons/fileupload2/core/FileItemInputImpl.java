@@ -82,7 +82,7 @@ class FileItemInputImpl implements FileItemInput {
      * @throws FileUploadException Parsing the incoming data stream failed.
      */
     FileItemInputImpl(final FileItemInputIteratorImpl fileItemIterator, final String fileName, final String fieldName, final String contentType,
-            final boolean formField, final long contentLength) throws FileUploadException, IOException {
+            final boolean formField, final long contentLength) throws IOException {
         this.fileItemInputIteratorImpl = fileItemIterator;
         this.fileName = fileName;
         this.fieldName = fieldName;

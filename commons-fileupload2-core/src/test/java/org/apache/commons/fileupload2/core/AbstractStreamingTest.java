@@ -106,7 +106,7 @@ public abstract class AbstractStreamingTest<AFU extends AbstractFileUpload<R, I,
         return upload.parseRequest(newServletRequestContext(request));
     }
 
-    protected FileItemInputIterator parseUpload(final int length, final InputStream inputStream) throws FileUploadException, IOException {
+    protected FileItemInputIterator parseUpload(final int length, final InputStream inputStream) throws IOException {
         final var contentType = "multipart/form-data; boundary=---1234";
 
         final var upload = newFileUpload();

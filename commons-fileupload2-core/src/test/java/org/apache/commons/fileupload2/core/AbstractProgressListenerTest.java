@@ -70,7 +70,7 @@ public abstract class AbstractProgressListenerTest<AFU extends AbstractFileUploa
 
     }
 
-    protected void runTest(final int itemCount, final long contentLength, final R request) throws FileUploadException, IOException {
+    protected void runTest(final int itemCount, final long contentLength, final R request) throws IOException {
         final var upload = newFileUpload();
         final var listener = new ProgressListenerImpl(contentLength, itemCount);
         upload.setProgressListener(listener);

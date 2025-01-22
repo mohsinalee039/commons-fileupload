@@ -719,7 +719,7 @@ public final class MultipartInput {
      * @throws MalformedStreamException if the stream ends unexpectedly.
      * @throws IOException              if an i/o error occurs.
      */
-    public long discardBodyData() throws MalformedStreamException, IOException {
+    public long discardBodyData() throws IOException {
         return readBodyData(NullOutputStream.INSTANCE);
     }
 
@@ -792,7 +792,7 @@ public final class MultipartInput {
      * @throws MalformedStreamException if the stream ends unexpectedly.
      * @throws IOException              if an i/o error occurs.
      */
-    public long readBodyData(final OutputStream output) throws MalformedStreamException, IOException {
+    public long readBodyData(final OutputStream output) throws IOException {
         try (var inputStream = newInputStream()) {
             return IOUtils.copyLarge(inputStream, output);
         }
